@@ -103,7 +103,7 @@ function onBtnClick(e)
     copyArray(dots, dots2);
     for(var i=0; i<row; i++)
       for(var j=0; j<col; j++)
-        draw(j, i, dots[j][i]);
+        draw(j, i, dots[i][j]);
   }
   drawText();
   drawPixel();
@@ -142,12 +142,12 @@ function drawPixel()
         }//end for l
       }//end for k
       if(filled >= pHeight*pWidth/2) {
-        dots2[j][i] = true;
+        dots2[i][j] = true;
         ctx2.fillStyle="#000000";
         ctx2.fillRect(j*pWidth, i*pHeight, pWidth, pHeight);
       }//end if
       else {
-        dots2[j][i] = false;
+        dots2[i][j] = false;
       }
     }//end for j
   }//end for i

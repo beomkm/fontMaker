@@ -146,6 +146,9 @@ function drawPixel()
         ctx2.fillStyle="#000000";
         ctx2.fillRect(j*pWidth, i*pHeight, pWidth, pHeight);
       }//end if
+      else {
+        dots2[j][i] = false;
+      }
     }//end for j
   }//end for i
 }

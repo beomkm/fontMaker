@@ -45,12 +45,8 @@ btn7.addEventListener('click', onBtnClick, false);
 drawGrid();
 
 
-
-
 function onMouseDown(e)
 {
-
-  console.log(e.button);
   var rect = canvas.getBoundingClientRect();
   var pos = mappingPos(e.clientX-rect.left, e.clientY-rect.top);
   isMouseDown = true;
@@ -179,7 +175,7 @@ function draw(x, y, isFill)
 
   for(var i=0; i<row; i++) {
     for(var j=0; j<col; j++) {
-      if(dots[i][j] == true) {
+      if(dots[i][j]) {
         str += "[" + j + "," + i + "],";
       }
     }
